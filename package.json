@@ -1,0 +1,28 @@
+{
+  "name": "serverless-crud",
+  "version": "0.1.0",
+  "description": "Serverless CRUD service",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "docker pull lambci/lambda",
+    "setup": "./node_modules/.bin/sls config credentials --provider aws --key AKIAJO42PSYJK7UIMUMA --secret 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",
+    "start": "./node_modules/.bin/sls offline start -r us-east-1 --noTimeout",
+    "install:dynamodb": "./node_modules/.bin/sls dynamodb install",
+    "start:dynamodb": "./node_modules/.bin/sls dynamodb start -p 8100  --migrate true"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "docker": "^1.0.0",
+    "esprima": "^4.0.0",
+    "serverless-dynamodb-client": "0.0.2",
+    "sls": "^0.1.0",
+    "uuid": "^2.0.3"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.78.0",
+    "serverless-dynamodb-local": "^0.2.22",
+    "serverless-offline": "^3.14.1"
+  }
+}
